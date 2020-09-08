@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS introduction-3 if and else判斷</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+        }
+        
+        .box.active {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+
+    <script>
+        var btn = document.querySelector(".box")
+
+        btn.onclick = function() {
+            
+            if (btn.classList.contains("active") == true) {
+                btn.classList.remove("active")
+                console.log("刪除active")
+            } else {
+                btn.classList.add("active")
+                console.log("新增active")
+            }
+        }
+    </script>
+</body>
+</html>
